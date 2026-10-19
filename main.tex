@@ -1,0 +1,86 @@
+\documentclass[aspectratio=1610,10pt,dvipsnames]{beamer}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[varg]{txfonts}
+\usepackage[french]{babel}
+\usepackage{multicol} % À ajouter dans le préambule
+
+\usetheme{Ilmenau}
+%%\usetheme{Copenhagen}
+%%\usetheme{PaloAlto}
+%%\usetheme{Antibes}
+%%\usetheme{Warsaw}
+
+\setbeamercovered{transparent}
+\setbeamertemplate{footline}[frame number]
+%%\usecolortheme[named=green]{structure}
+
+\addtobeamertemplate{footline}{\insertframenumber/\inserttotalframenumber}
+
+
+\title{L'instant Brain Fuck}
+\date{2026}
+\institute{CEA}
+\author{Philippe DENIEL (philippe.deniel@cea.fr)}
+
+
+\begin{document}
+
+\frame{\titlepage}
+
+\begin{frame}[plain]
+\frametitle{Comment diviser par 7 facilement ?}
+
+Il faut se rappeler que $ 1/7 = 0,14228571428857\cdots = 0,\overline{142857}$
+\\[0.3em]
+La valeur décimale présente une période de 6 chiffres, or $142857$ a une propriété fascinante : c'est 
+un nombre \textbf{multi-cyclique}
+
+\begin{multicols}{2}
+\begin{itemize}
+    \item 142857 x 1 = 142857
+    \item 142857 x 2 = 285714
+    \item 142857 x 3 = 4285714
+    \columnbreak
+    \item 142857 x 4 = 571428
+    \item 142857 x 5 = 714285
+    \item 142857 x 6 = 857142
+\end{itemize}
+\end{multicols}
+Les multiples de 142857 s'écrivent avec les mêmes chiffres, dans le même ordre, à une permutation circulaire
+près. 
+\\[0.3em]
+Il suffit de se rappelerl'ordre des chiffres de 142857, soit 1, 2, 4, 5, 7 8 pour savoir calculer toutes les
+valeurs de $1/7$ à $6/7$.
+\\[0.3em]
+Ainsi $5/7 = 0,\overline{714285}$
+\\[0.3em]
+A titre d'exemple $22/7= 21/7 + 1/7 = 3 + 1/7 =  3,\overline{142857}$, c'est une approximation de $\pi$
+utilisée pendant du temps des pharaons. 
+\end{frame}
+
+\begin{frame}{e à la puissance $\pi$}
+A quatre décimales près, $e^\pi \approx 20 + \pi $
+\\[2cm]
+\begin{equation*}
+\begin{split}
+    e^{\pi} &- \pi =  19,999099792\cdots \\
+    e^{\pi} &- \pi = 20 -0,00090002082834 ```
+\end{split}
+\end{equation*}
+
+\end{frame}
+
+\begin{frame}{Puissance de $e$ et $\pi$}
+On a 
+\begin{equation*}
+\begin{split}
+    \pi^4 + \pi^5 &\approx e^6 \textrm {  à 5 décimales près} \\
+    \pi^4 + \pi^5 &= e^6 -1.76734512321.10^{-5} \\
+\end{split}
+\end{equation*}
+\end{frame}
+
+
+
+\end{document}
