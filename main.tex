@@ -56,7 +56,7 @@ valeurs de $1/7$ à $6/7$.
 Ainsi $5/7 = 0,\overline{714285}$
 \\[0.3em]
 A titre d'exemple $22/7= 21/7 + 1/7 = 3 + 1/7 =  3,\overline{142857}$, c'est une approximation de $\pi$
-utilisée pendant du temps des pharaons. 
+utilisée pendant du temps des pharaons et connue d'Archimède. 
 \end{frame}
 
 \begin{frame}{e à la puissance $\pi$}
@@ -78,6 +78,13 @@ On a
     \pi^4 + \pi^5 &\approx e^6 \textrm {  à 5 décimales près} \\
     \pi^4 + \pi^5 &= e^6 -1.76734512321.10^{-5} \\
 \end{split}
+\end{equation*}
+On a aussi
+\begin{equation*}
+\begin{split}
+    \pi ^{\sqrt[{3}]{93}}-\mathrm {e} ^{\sqrt[{3}]{93}} &= 86{,}0000188811\dots \\
+     \pi ^{\sqrt[{3}]{93}}-\mathrm {e} ^{\sqrt[{3}]{93}} &\approx 86 + 1.8\times 10e^{-5} \\
+\end{split} 
 \end{equation*}
 \end{frame}
 
@@ -157,15 +164,64 @@ L'écart par rapport à $\pi/2$ est de l'ordre de $10e^{-11}$.
 On a d'abord cru à une erreur dans le calcul de l'intégrale. On ne retrouve
 plus la valeur de $\pi/2$ au delà de $I_{11}$.
 \end{frame}
- 
-
 
 \begin{frame}{Somme des entiers et somme des cubes}
-    
+Soit la somme des entiers de $1$ à $n$
+\begin{equation*}
+    E_n = \sum_{k=1}^n k = \frac{n(n+1)}{2}
+\end{equation*}
+Soit la somme des cubes des entiers
+\begin{equation*}
+    C_n = \sum_{k=1}^n k^3 
+\end{equation*}
+On a 
+\begin{equation*}
+    C_n = E_n^2 = ( \sum_{k=1}^n k)^2 = \frac{n^2(n+1)^2}{4}
+\end{equation*}
+La somme des cubes des entiers est égale au carré de la somme des entiers. 
 \end{frame}
 
-\begin{frame}{Presque un entier !}
-    
+\begin{frame}{La constante de Ramanujan}
+
+Considérons le nombre $e^{\pi\sqrt{163}}$, elle s'évalue à 
+\begin{equation*}
+\begin{split}
+   e^{\pi\sqrt{163}} &= 262,537,412,640,768,743.99999999999925\cdots \approx 262.5\times 10e^{15} \\
+   e^{\pi\sqrt{163}} &\approx 640,320^2 +744
+\end{split}
+\end{equation*}
+C'est presque un nombre premier, à $10e{-13}$ près. 
+\\[0.1em]
+Ces puissances successives ont des propriétés voisines avec une précision moindre. 
+\\[0.1em]
+Les propriétés de la constante de Ramanujan ne sont pas dues au hasard, il y a un lien fort avec 
+les nombreds de Heegner (163 est le plus grand nombre de Heegner).
+\\[0.2em]
+On a aussi 
+\begin{equation*}
+\begin{split}
+ e^{\pi {\sqrt {43}}} &\approx 12^{3}(9^{2}-1)^{3}+744-0{,}00022 \\
+ e^{\pi\sqrt{58}} &= 24591257751,99999982... \\
+ {e} ^{\pi {\sqrt {67}}}&\approx 12^{3}(21^{2}-1)^{3}+744-0{,}0000013\\
+\end{split}    
+\end{equation*}
+et leurs puissances sont aussi "presque" etières.
+\end{frame}
+
+\begin{frame}{D'autres "presque entiers"}
+On notera les curiosités suivantes
+\begin{equation*}
+\begin{split}
+    \left({\frac {\ln(640320^{3}+744)}{\pi }}\right)^{2}& =163{,}
+    \underbrace {0000000000000000000000000000} _{28}232\dots \\
+    \sum _{n=1}^{\infty }{\frac {n^{3}}{\mathrm {e} ^{2\pi n/13}-1}}&=119{,}\underbrace {0000000000000000000000000000000} _{31}959374585\dots \\
+    \pi ^{\sqrt[{3}]{93}}-\mathrm {e} ^{\sqrt[{3}]{93}}&=86{,}0000188811\dots \\
+\end{split}
+\end{equation*}
+\end{frame}
+
+\begin{frame}{Le retour des intégrales de Borwein}
+On peut ajouter un cosinus dans l'intégrale de Borwein
 \end{frame}
 
 \end{document}
