@@ -119,8 +119,54 @@ Quand $n$ est grand on a
 \end{frame}
 
 
-\begin{frame}{Intégrales de Borwein}
+\begin{frame}{Intégrales de Borwein (1/2)}
+Soit l'intégrale $I_1$ définie par 
+\begin{equation*}
+I_1 = \int_{0}^{+\infty} \frac{sin(x}{x}.dx = \frac{\pi}{2}
+\end{equation*}
+Mais on a aussi
+\begin{equation*}
+\begin{split}
+I_3 &= \int_{0}^{+\infty} \frac{sin(x)}{x} \frac{sin(x/3)}{x/3}.dx =
+     \frac{\pi}{2}    \\
+I_5 &= \int_{0}^{+\infty} \frac{sin(x)}{x} \frac{sin(x/3)}{x/3} 
+  \frac{sin(x/5)}{x/5}.dx = \frac{\pi}{2}    \\     
+I_7 &= \int_{0}^{+\infty} \frac{sin(x)}{x} \frac{sin(x/3)}{x/3} 
+  \frac{sin(x/5)}{x/5} \frac{sin(x/7)}{x/7}.dx = \frac{\pi}{2}    \\ 
+  &\vdots \\
+ I_{13} &= \int_{0}^{+\infty} \frac{sin(x)}{x} \frac{sin(x/3)}{x/3} 
+  \frac{sin(x/5)}{x/5} \frac{sin(x/7)}{x/7} \frac{sin(x/9)}{x/9}
+  \frac{sin(x/11)}{x/11} \frac{sin(x/13)}{x/13}.dx = \frac{\pi}{2}    \\ 
+\end{split}
+\end{equation*}
+\end{frame}
+
+\begin{frame}{Intégrales de Borwein (1/2)}
+Mais...
+\begin{equation*}
+ I_{15} = \int_{0}^{+\infty} \frac{sin(x)}{x} \frac{sin(x/3)}{x/3} 
+  \cdots \frac{sin(x/13)}{x/13} \frac{sin(x/15)}{x/15}.dx = 
+  \frac{467807924713440738696537864469}{935615849440640907310521750000}\pi
+\end{equation*}
+On a 
+\begin{equation*}
+     I_{15} \approx 0,9999999999852937186. \frac{\pi}{2}
+\end{equation*}
+L'écart par rapport à $\pi/2$ est de l'ordre de $10e^{-11}$. 
+\\[0.5em]
+On a d'abord cru à une erreur dans le calcul de l'intégrale. On ne retrouve
+plus la valeur de $\pi/2$ au delà de $I_{11}$.
+\end{frame}
+ 
+
+
+\begin{frame}{Somme des entiers et somme des cubes}
+    
+\end{frame}
+
+\begin{frame}{Presque un entier !}
     
 \end{frame}
 
 \end{document}
+
