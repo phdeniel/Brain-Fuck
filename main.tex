@@ -28,14 +28,25 @@
 
 \frame{\titlepage}
 
-\begin{frame}[plain]
-\frametitle{Comment diviser par 7 facilement ?}
+\begin{frame}{Nombres premiers gaussiens}
+Le nombre $5$ est-il entier ? On peut remarquer que 
+\begin{equation*}
+    5 = 4 + 1 = 2^2-i^2 = (2-i)(2+i)
+\end{equation*}
+5 est premier dans l'anneau $\mathbb{Z}$ mais pas dans l'anneau $\mathbb{Z}[i]$
+\\[0.5em]
+En entier premier dans $\mathbb{Z}[i]$ est un \textbf{nombre premier de Gauss}. 
+\\[0.5em]
+Les nombres premiers non-gaussiens sont la somme de deux carrés dans $\mathbb{Z}$ , on peut démontrer 
+que ces nombres sont congruent à $1$ modulo $4$. (ainsi on a $5 \equiv 1 [4])$
+\end{frame}
+
+\begin{frame}{Comment diviser par 7 facilement ?}
 
 Il faut se rappeler que $ 1/7 = 0,14228571428857\cdots = 0,\overline{142857}$
 \\[0.3em]
 La valeur décimale présente une période de 6 chiffres, or $142857$ a une propriété fascinante : c'est 
 un nombre \textbf{multi-cyclique}
-
 \begin{multicols}{2}
 \begin{itemize}
     \item 142857 x 1 = 142857
@@ -49,14 +60,14 @@ un nombre \textbf{multi-cyclique}
 \end{multicols}
 Les multiples de 142857 s'écrivent avec les mêmes chiffres, dans le même ordre, à une permutation circulaire
 près. 
-\\[0.3em]
+\\[0.2em]
 Il suffit de se rappelerl'ordre des chiffres de 142857, soit 1, 2, 4, 5, 7 8 pour savoir calculer toutes les
-valeurs de $1/7$ à $6/7$.
-\\[0.3em]
-Ainsi $5/7 = 0,\overline{714285}$
-\\[0.3em]
+valeurs de $1/7$ à $6/7$. Ainsi $5/7 = 0,\overline{714285}$
+\\[0.2em]
 A titre d'exemple $22/7= 21/7 + 1/7 = 3 + 1/7 =  3,\overline{142857}$, c'est une approximation de $\pi$
 utilisée pendant du temps des pharaons et connue d'Archimède. 
+\\[0.2em]
+Ca marche aussi pour divisiser par $17$ en se rappelant de la période $0 588 235 294 117 647$
 \end{frame}
 
 \begin{frame}{e à la puissance $\pi$}
@@ -129,7 +140,7 @@ Quand $n$ est grand on a
 \begin{frame}{Intégrales de Borwein (1/2)}
 Soit l'intégrale $I_1$ définie par 
 \begin{equation*}
-I_1 = \int_{0}^{+\infty} \frac{sin(x}{x}.dx = \frac{\pi}{2}
+I_1 = \int_{0}^{+\infty} \frac{sin(x)}{x}.dx = \frac{\pi}{2}
 \end{equation*}
 Mais on a aussi
 \begin{equation*}
@@ -208,7 +219,7 @@ On a aussi
 et leurs puissances sont aussi "presque" etières.
 \end{frame}
 
-\begin{frame}{D'autres "presque entiers"}
+\begin{frame}{Srong laws of small numbers}
 On notera les curiosités suivantes
 \begin{equation*}
 \begin{split}
@@ -218,11 +229,49 @@ On notera les curiosités suivantes
     \pi ^{\sqrt[{3}]{93}}-\mathrm {e} ^{\sqrt[{3}]{93}}&=86{,}0000188811\dots \\
 \end{split}
 \end{equation*}
+Cela illustre la \textit{strong law of small numbers} énoncé (humoristiquement) par Richard K. Guy en 1980 (doi:10.2307/2322249): 
+\begin{quote}
+    There aren't enough small numbers to meet the many demands made of them.
+\end{quote}
+Il a complété se propos par un seconde "strong law of small numbers" en 1990 (doi:10.2307/2691503)
+\begin{quote}
+    When two numbers look equal, it ain't necessarily so! 
+\end{quote}
+    
+
+    
+
 \end{frame}
 
 \begin{frame}{Le retour des intégrales de Borwein}
-On peut ajouter un cosinus dans l'intégrale de Borwein
+On peut ajouter un cosinus dans l'intégrale de Borwein, on obtient alors :
+\begin{equation*}
+\begin{split}
+J_1 &= \int_{0}^{+\infty} cos(x) \frac{sin(x)}{x}.dx = \frac{\pi}{4} \\
+J_3 &= \int_{0}^{+\infty} cos(x) \frac{sin(x)}{x} \frac{sin(x/3)}{x/3}.dx =
+     \frac{\pi}{4}    \\
+J_5 &= \int_{0}^{+\infty} cos(x) \frac{sin(x)}{x} \frac{sin(x/3)}{x/3} 
+  \frac{sin(x/5)}{x/5}.dx = \frac{\pi}{4}    \\     
+J_{111} &= \int_{0}^{+\infty} cos(x) \frac{sin(x)}{x} \frac{sin(x/3)}{x/3} 
+  \frac{sin(x/5)}{x/5} \frac{sin(x/7)}{x/7} \cdots \frac{sin(x/111)}{x/111}.dx = \frac{\pi}{4}    \\ 
+J_{113} &= \int_{0}^{+\infty} cos(x) \frac{sin(x)}{x} \frac{sin(x/3)}{x/3} 
+  \frac{sin(x/5)}{x/5} \frac{sin(x/7)}{x/7} \cdots \frac{sin(x/111)}{x/111}\frac{sin(x/113)}{x/113}.dx < \frac{\pi}{4}    \\ 
+\end{split}
+\end{equation*}
 \end{frame}
+
+\begin{frame}{Cercle de Moser}
+Voici une suite de nombres: $1, 22, 4, 8, 16$. Quel est le suivant ? Ce n'est pas $32$ mais $31$
+\begin{figure}
+    \centering
+    \includegraphics[height=0.50\textheight]{images/Circle_division_by_chords.svg.png} 
+\end{figure}
+On obtient la séquence  $1, 2, 4, 8, 16, 31, 57, 99, 163, 256, ...$ qui invite à viter les généralisations hatives. On la doit à Leo Mosr en 1949. En fait on a~:
+\begin{equation*}
+     r_n={n \choose 4}+{n \choose 2}+1={\frac {1}{24}}(n^{4}-6n^{3}+23n^{2}-18n+24)
+\end{equation*}
+\end{frame}
+
 
 \end{document}
 
